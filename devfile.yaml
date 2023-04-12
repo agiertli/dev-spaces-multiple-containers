@@ -34,11 +34,15 @@ components:
       size: 1G
 commands:
   - id: database-command
-    component: database
-    commandLine: echo "test"
+    exec:
+      component: database
+       workingDir: ${PROJECT_SOURCE}
+      commandLine: echo "test"
   - id: broker-command
-    component: message-broker
-    commandLine: echo "test"    
+    exec:
+      component: message-broker
+      workingDir: ${PROJECT_SOURCE}
+      commandLine: echo "test"    
   - id: 1-build
     exec:
       component: tools
