@@ -36,7 +36,7 @@ commands:
   - id: database-command
     exec:
       component: database
-       workingDir: ${PROJECT_SOURCE}
+      workingDir: ${PROJECT_SOURCE}
       commandLine: echo "test"
   - id: broker-command
     exec:
